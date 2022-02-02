@@ -1,0 +1,318 @@
+﻿
+
+body {
+    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Yanone Kaffeesatz', Helvetica, Arial, Lucida, sans-serif;
+     
+    
+  }
+  img {
+    width: 100%; /* need to overwrite inline dimensions */
+    height: auto;
+  }
+  h2 {
+    margin-bottom: .5em;
+    text-align: center;
+  }
+
+  p {
+    background: #323131;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 92%;
+    font-family: monospace;
+    color: #c7c4c2;
+}
+  
+  /* hover styles */
+  .location-listing {
+    position: relative;
+  }
+  
+  .location-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .location-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+  
+  .location-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90,0,10,0.4);
+    color: white;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location-listing:hover .location-title {
+    opacity: 1;
+  }
+  
+  .location-listing:hover .location-image img {
+    filter: blur(2px);
+  }
+  
+  
+  /* for touch screen devices */
+  @media (hover: none) { 
+    .location-title {
+      opacity: 1;
+    }
+    .location-image img {
+      filter: blur(2px);
+    }
+  }
+header{
+    width:100%;
+    display:table;
+    background-color: #0c0802;
+    margin-bottom:50px
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(../img/content_1.jpeg);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+    }
+
+    header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    }
+
+header .intro-text .intro-heading {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px double black;
+}
+.toggle-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width:30px;
+    height:30px;
+    position:absolute;
+    background-color: #7a7878;
+}
+@media (min-width: 1200px) {
+.container{
+        max-width:1140px
+}
+}
+#logo {
+  float: left;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fffab2;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 11px 0;
+  margin-left: 2%;
+}
+nav{
+  width:auto;
+  float:right;
+  margin-top:7px
+}
+nav ul{
+  display:table;
+  float:right;
+  margin:0;padding:0;
+}
+nav ul li{
+  float:left;
+  list-style-type:none;
+}
+nav ul li:last-child{
+  padding-right:0
+}
+nav ul li a {
+  color: #ffffff;
+  font-size: 19px;
+  padding: 7px 19px;
+  display: inline-block;
+  text-decoration: none;
+}
+nav ul li a:hover{
+  background-color:#143a06;
+  color:#fff9c8;
+  text-decoration:underline;
+}
+input[type=checkbox],
+label{
+  display:none;
+}
+@media only screen and (max-width: 980px) {
+    header {
+      padding:20px 0
+    }
+    #logo {
+      padding:0
+    }
+    input[type=checkbox]{position:absolute;top:-9999px;left:-9999px;background:none}
+    input[type=checkbox]:fous{background:none}
+    label{float:right;display:inline-block;cursor:pointer;margin-right:65px}
+    input[type=checkbox]:checked ~ nav{display:block
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    right: 75%;
+    top: 53px;
+    padding: 0;
+    z-index: 99;
+    background: black;
+}
+    nav ul{
+      width:auto;
+    }
+    nav ul li {
+      float:none;
+      padding:0;
+      width:100%;
+      display:table;
+    }
+    nav ul li a {
+      color: #fff;
+      font-size: 15px;
+      padding: 10px 20px;
+      display: block; border-bottom: 1px solid rgba(225,225,225,0.1)}
+    }
+    @media only screen and (max-width: 360px) {
+    label{
+        padding:5px 0;
+    }
+    #logo{
+        font-size:20px;
+    }
+    nav{
+        top:47px;
+    }
+    }
+      img {
+        width: 100%; /* need to overwrite inline dimensions */
+        height: auto;
+      }
+      h4 {
+        margin-bottom: 0.5em;
+        margin-left: 4%;
+        color: #0c0b0b;
+        text-align: center;
+        font-family: monospace;
+        font-size: 166%;
+    }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1em;
+      }
+
+      footer {
+        background: black;
+        color: white;
+        padding-top: 9%;
+    }
+      
+
+      .content {
+        position: relative;
+        display: flex;
+    }
+
+    .h1, h1 {
+        font-size: 93%;
+        text-align: center;
+        font-family: monospace;
+        line-height: 170%;
+        color: #a7a7a7;
+    }
+
+    .h3, h3 {
+      font-size: 223%;
+      color: #bd0d0d;
+      font-family: monospace;
+  }
+
+  .h6, h6 {
+    font-size: 106%;
+    line-height: 188%;
+    font-family: monospace;
+    color: #9d9b99;
+    text-align: center;
+}
+
+    @media (max-width: 1200px) {
+        .content {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
